@@ -33,6 +33,12 @@ public class LibroService {
         libroRepository.eliminar(id);
         return "Libro eliminado";
     }
+
+    public Libro getLibroIsbn(String isbn){
+        return libroRepository.buscarPorIsbn(isbn);
+    }
+
+
     // opcion 1 para saber el total de libros
     // obtenemos la lista de libros y sacamos el .size(), pero la responsabilidad de esa fincion debe ser de librorepository
     public int totalLibrosV1(){
