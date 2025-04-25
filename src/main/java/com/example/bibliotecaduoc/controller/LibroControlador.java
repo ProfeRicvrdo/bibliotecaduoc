@@ -22,7 +22,7 @@ public class LibroControlador {
     }
 
     @PostMapping
-
+    @ResponseStatus(HttpStatus.CREATED)
     public Libro agregarLibro(@RequestBody Libro libro){
         return libroService.saveLibro(libro);
     }
@@ -39,6 +39,16 @@ public class LibroControlador {
     @DeleteMapping("{id}")
     public String eliminarLibro(@PathVariable int id){
         return libroService.deleteLibro(id);
+    }
+
+    @GetMapping
+    public int totalLibrosV1(){
+        return libroService.totalLibrosV1();
+    }
+
+    @GetMapping("/total")
+    public int totalLibrosV2(){
+        return libroService.totalLibrosV2();
     }
 
 
