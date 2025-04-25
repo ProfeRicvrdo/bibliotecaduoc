@@ -3,10 +3,11 @@ package com.example.bibliotecaduoc.repository;
 import java.util.List;
 import java.util.ArrayList;
 
-import ch.qos.logback.core.encoder.ByteArrayUtil;
+
 import com.example.bibliotecaduoc.model.Prestamo;
 import org.springframework.stereotype.Repository;
 
+@Repository
 public class PrestamoRepository {
 
     private List<Prestamo> listaPrestamos = new ArrayList<>();
