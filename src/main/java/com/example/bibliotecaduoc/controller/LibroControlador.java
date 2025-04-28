@@ -33,7 +33,7 @@ public class LibroControlador {
     }
 
     @GetMapping("{isbn}")
-    public Libro buscarLibro(@PathVariable String isbn){
+    public Libro buscarLibroPorIsbn(@PathVariable String isbn){
         return libroService.getLibroIsbn(isbn);
     }
 
@@ -46,7 +46,7 @@ public class LibroControlador {
         return libroService.deleteLibro(id);
     }
 
-    @GetMapping
+    @GetMapping("/libros/total")
     public int totalLibrosV1(){
         return libroService.totalLibrosV1();
     }
