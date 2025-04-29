@@ -45,12 +45,12 @@ public class LibroControlador {
     public String eliminarLibro(@PathVariable int id){
         return libroService.deleteLibro(id);
     }
-
+    //this
     @GetMapping("/libros/total")
     public int totalLibrosV1(){
         return libroService.totalLibrosV1();
     }
-
+    //this too
     @GetMapping("/total")
     public int totalLibrosV2(){
         return libroService.totalLibrosV2();
